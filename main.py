@@ -1,8 +1,7 @@
 from pytube import YouTube
 import datetime
+import sys
 
-
-url = 'https://www.youtube.com/watch?v=VwVg9jCtqaU'
 
 def format_filesize(size):
     if size > 1000_000_000:
@@ -49,9 +48,12 @@ def load_url(url):
 
     return streams, videos, audios
 
-
-streams, videos, audios = load_url(url)
-
+url = str(input("Enter Youtube URL [e.g. https://www.youtube.com/watch?v=VwVg9jCtqaU] :- "))
+try:
+    streams, videos, audios = load_url(url)
+except Exception as e:
+    print('Error has Occaired please try again.')
+    sys.exit(0)
 
 def format_streams(videos, audios):
 

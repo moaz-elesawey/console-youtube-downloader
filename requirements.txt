@@ -1,0 +1,7 @@
+certifi==2020.12.5
+chardet==4.0.0
+idna==2.10
+pytube==10.4.1
+requests==2.25.1
+typing-extensions==3.7.4.3
+urllib3==1.26.3
